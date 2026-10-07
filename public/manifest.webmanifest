@@ -1,0 +1,12 @@
+{
+  "name": "VC Wallet - UIDAI Sandbox",
+  "short_name": "VC Wallet",
+  "description": "Mock Verifiable Credential Wallet (UIDAI Sandbox assignment)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f9",
+  "theme_color": "#12508f",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

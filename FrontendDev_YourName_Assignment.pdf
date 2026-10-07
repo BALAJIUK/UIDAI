@@ -1,0 +1,104 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2916 >>
+stream
+BT /F1 11 Tf 50 792 Td 14 TL
+(Frontend Developer Assignment  UIDAI Sandbox) Tj T*
+(Candidate: Your Name) Tj T*
+(Stack: React 19, Vite 8, Redux Toolkit, Vitest, Service Worker \(JS\)) Tj T*
+(GitHub: https://github.com/<your-username>/vc-wallet-uidai-sandbox) Tj T*
+() Tj T*
+(PART 1  Credential Dashboard & State Management) Tj T*
+(- Responsive grid/list of mock credentials \(name, issuer, type, issue date,) Tj T*
+(  status badge, masked identifier\). Mock identifiers only, no real PII.) Tj T*
+(- Redux Toolkit: credentialsSlice holds items, status, error, with an) Tj T*
+(  async thunk calling GET /api/credentials.) Tj T*
+(- Explicit UI states: Loading \(shimmer skeleton + aria-live\), Error) Tj T*
+(  \(message + Retry\), Empty \(no credentials\), Success \(credential list,) Tj T*
+(  count\). Demo buttons switch Success/Empty/Error scenarios.) Tj T*
+(- Mock API: Vite dev/preview middleware serves /api/credentials with a) Tj T*
+(  900ms delay \(so the loading state is visible\) and scenario params.) Tj T*
+(- Performance: React.memo on cards/list, stable selectors, no extra) Tj T*
+(  effects/re-renders. Semantic HTML, keyboard-focusable controls.) Tj T*
+() Tj T*
+(PART 2  SecureDataMask Component) Tj T*
+(- Reusable component <SecureDataMask value="123456789012" />; masked by) Tj T*
+(  default \(XXXX-XXXX-9012\). Tap to Reveal shows full value; button flips) Tj T*
+(  to Tap to Hide with aria-pressed.) Tj T*
+(- Auto re-mask after exactly 10s; manual hide masks instantly; timers) Tj T*
+(  cleared on hide/unmount/re-reveal. Revealed value stays only in local) Tj T*
+(  state; never logged, never in URLs/localStorage/aria attributes.) Tj T*
+(- Accessibility: focusable button, visible focus ring, aria-live status) Tj T*
+(  announces revealed/hidden, WCAG-sufficient contrast.) Tj T*
+(- Note: masking is a UI privacy control, NOT cryptographic protection.) Tj T*
+() Tj T*
+(PART 3  Offline PWA Support & Automated Testing) Tj T*
+(- Service worker \(public/service-worker.js\): GET /api/credentials handled) Tj T*
+(  network-first; latest OK response cached in Cache Storage; on network) Tj T*
+(  failure serve cached list; if none, return [] JSON fallback. Non-GET) Tj T*
+(  requests are never cached; old caches purged on activate.) Tj T*
+(- Installable PWA: manifest.webmanifest + SVG icon + SW registration in) Tj T*
+(  main.jsx. UI shows Online/Offline chip and banner.) Tj T*
+(- Security note: Cache Storage is unencrypted per-origin device storage ) Tj T*
+(  demo caches mock data only; production needs TTLs, logout purge, TLS,) Tj T*
+(  disk encryption.) Tj T*
+(- Tests \(Vitest + RTL, fake timers\): masked by default; hidden initially;) Tj T*
+(  reveal on click; SR announcement; masked again at t=10000 \(9999 still) Tj T*
+(  revealed\); state reset; timer cleanup \(vi.getTimerCount\(\)===0\); manual) Tj T*
+(  hide; safe unmount; no console leak. 8/8 pass.) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 723 >>
+stream
+BT /F1 11 Tf 50 792 Td 14 TL
+(HOW TO RUN) Tj T*
+(npm install) Tj T*
+(npm run dev       # start dev server \(mock API + loading delay\)) Tj T*
+(npm test          # run automated tests) Tj T*
+(npm run build     # production build) Tj T*
+(npm run preview   # preview build \(service worker active\)) Tj T*
+() Tj T*
+(ASSUMPTIONS & LIMITATIONS) Tj T*
+(- Mock data only; no real Aadhaar/UIDAI API; single page; no auth.) Tj T*
+(- Demo identifiers kept in Redux state for display; production should) Tj T*
+(  fetch identifiers on demand. SW cache has no TTL/encryption.) Tj T*
+() Tj T*
+(SCREENSHOTS \(placeholders\)) Tj T*
+([ Dashboard ] [ Loading ] [ Error ] [ Empty ] [ Masked ] [ Revealed ]) Tj T*
+([ Offline banner ]) Tj T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000003285 00000 n 
+0000003411 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4185
+%%EOF
